@@ -4,9 +4,11 @@ class Node{
     public:
     int value;
     Node * next;
+
     Node(){
         value=0;
         next=nullptr;
+
     }
 };
 class Queue{
@@ -60,6 +62,9 @@ class Queue{
      int getfront(){
         return front->value;
      }
+     int getback(){
+        return back->value;
+     }
      void size(){
         int count=0;
         Node *temp=front;
@@ -86,19 +91,19 @@ class Queue{
         }
         
      }
+     
 };
 
 int main(){
 Queue q;
 int item;
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < 2; i++)
 {
     cout<<"Please Enter the item .\n";
     cin>>item;
     q.push(item);
 }
 q.display();
-q.Clear();
-cout<<"display After clear";q.display();
+
 
 }
